@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Guide | Prompt Stack</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">PROMPT STACK</span>
+                <span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#products" class="nav-link">Products</a>
+                <a href="/#guides" class="nav-link">Guides</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="https://github.com/prompt-stack" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="guide-page">
+        <div class="container">
+            <div class="guide-back">
+                <a href="/#guides">← Back to Guides</a>
+            </div>
+            <article id="guide-content" class="guide-article">
+                <!-- Content loaded here -->
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Built with AI-assisted development. The code is real, the deployments work.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get markdown file from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const mdFile = 'ai-assisted-coding-from-syntax-to-systems.md';
+
+        if (mdFile) {
+            fetch(mdFile)
+                .then(response => response.text())
+                .then(markdown => {
+                    // Remove frontmatter if present
+                    const content = markdown.replace(/^---[\s\S]*?---\n/, '');
+                    // Render markdown to HTML
+                    const html = marked.parse(content);
+                    document.getElementById('guide-content').innerHTML = html;
+
+                    // Set page title from first h1
+                    const firstH1 = document.querySelector('#guide-content h1');
+                    if (firstH1) {
+                        document.getElementById('page-title').textContent = firstH1.textContent + ' | Prompt Stack';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('guide-content').innerHTML = '<p>Error loading guide.</p>';
+                });
+        }
+    </script>
+</body>
+</html>
