@@ -2,95 +2,45 @@
 
 **Engineering knowledge through prompts**
 
-Portfolio site showcasing AI-assisted development projects, technical guides, and insights on the shift from syntax to systems.
+Custom-built portfolio site showcasing AI-assisted development projects and technical guides. Zero templates, zero frameworks - pure HTML, CSS, and vanilla JavaScript with a futuristic design.
 
 🌐 **Live Site**: [prompt-stack.github.io](https://prompt-stack.github.io)
 
-## What This Is
+## Features
 
-A Jekyll-powered portfolio site documenting:
-- **Guides** - Technical deep-dives on Claude, AI-assisted development, and engineering
-- **Projects** - Production-ready applications (Content Engine, Content Stack, etc.)
-- **Essays** - Philosophy and analysis on AI, accessibility, and systems thinking
+- **Animated Starfield Background** - Multi-layer parallax stars
+- **Smooth Animations** - Fade-in effects and smooth scrolling
+- **Gradient Typography** - Dynamic gradient text effects
+- **Responsive Design** - Mobile-first responsive layout
+- **Zero Dependencies** - No frameworks, no build process
+- **Fast Loading** - Static HTML with minimal CSS/JS
 
-## Tech Stack
-
-- **Static Site Generator**: Jekyll
-- **Hosting**: GitHub Pages
-- **Design**: Custom CSS with dark mode support
-- **Collections**: Guides, Essays, Projects
-
-## Local Development
-
-```bash
-# Install dependencies
-bundle install
-
-# Run local server
-bundle exec jekyll serve
-
-# View at http://localhost:4000
-```
-
-## Site Structure
+## Structure
 
 ```
 prompt-stack.github.io/
-├── _config.yml          # Jekyll configuration
-├── _layouts/            # Custom layouts
-│   ├── default.html    # Base layout
-│   ├── guide.html      # Guide layout
-│   ├── essay.html      # Essay layout
-│   └── project.html    # Project layout
-├── _guides/             # Guide collection
-├── _essays/             # Essay collection
-├── _projects/           # Project collection
-├── assets/css/          # Custom CSS
-├── index.md             # Homepage
-├── guides.md            # Guides listing
-├── projects.md          # Projects listing
-└── about.md             # About page
-```
-
-## Adding Content
-
-### New Guide
-
-Create a file in `_guides/` with frontmatter:
-
-```markdown
----
-title: "Your Guide Title"
-date: 2025-10-18
-summary: "Brief description"
-tags: ["tag1", "tag2"]
----
-
-# Content here
-```
-
-### New Project
-
-Create a file in `_projects/` with frontmatter:
-
-```markdown
----
-title: "Project Name"
-summary: "Brief description"
-repo: "https://github.com/user/repo"
-demo: "https://demo.url"
----
-
-# Content here
+├── index.html           # Homepage
+├── css/
+│   └── style.css       # Futuristic styling
+├── js/
+│   └── script.js       # Smooth interactions
+└── guides/             # Technical guides
 ```
 
 ## Design Philosophy
 
-- **Clean & Minimal** - Focus on content, not chrome
-- **Readable** - Optimized line length and spacing
-- **Dark Mode** - Automatic based on system preference
-- **Responsive** - Mobile-first design
-- **Fast** - Static site, no JavaScript required
+**Jetsons-Style Futuristic:**
+- Animated starfield background
+- Gradient text effects
+- Glow and shadow effects
+- Smooth hover animations
+- Dark theme with vibrant accents
+
+**Performance:**
+- Static HTML (no build step)
+- Minimal CSS (~400 lines)
+- Vanilla JS (no libraries)
+- Optimized for GitHub Pages
 
 ## Projects Featured
 
@@ -98,10 +48,25 @@ demo: "https://demo.url"
 - [Content Stack](https://github.com/prompt-stack/content-stack) - Media processing with strict architecture
 - [Prompt Stack Lite](https://github.com/prompt-stack/prompt-stack-lite) - AI development starter
 
+## Local Development
+
+```bash
+# No build process needed!
+# Just open index.html in a browser
+
+# Or run a simple server:
+python3 -m http.server 8000
+# Visit http://localhost:8000
+```
+
+## Adding Content
+
+Add new guides to the `guides/` directory and update the guide list in `index.html`.
+
 ## License
 
-MIT License - see LICENSE.md
+MIT License
 
 ---
 
-**Built with AI-assisted development.** The code is real, the deployments work, and the insights are actionable.
+**Built with AI-assisted development.** Custom design, zero templates, pure code.
