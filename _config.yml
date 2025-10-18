@@ -1,0 +1,66 @@
+title: "Prompt Stack"
+description: "Engineering knowledge through prompts - guides, essays, and projects created with AI-assisted development"
+author: "Prompt Stack"
+email: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# URL settings - GitHub Pages main site (no baseurl needed)
+url: "https://prompt-stack.github.io"
+baseurl: ""
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /guides/:title/
+  essays:
+    output: true
+    permalink: /essays/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+  - scope:
+      path: ""
+      type: "essays"
+    values:
+      layout: "essay"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Navigation
+header_pages:
+  - guides.md
+  - projects.md
+  - about.md
+
+# SEO
+twitter:
+  username: ""
+  card: summary
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - README.md
+  - LICENSE.md
+  - _backup

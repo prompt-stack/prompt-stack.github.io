@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="guide">
+  <header class="guide-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}
+    <p class="guide-summary">{{ page.summary }}</p>
+    {% endif %}
+    <div class="guide-meta">
+      {% if page.repo %}
+      <a href="{{ page.repo }}" target="_blank" rel="noopener">View on GitHub →</a>
+      {% endif %}
+      {% if page.demo %}
+      <a href="{{ page.demo }}" target="_blank" rel="noopener">Live Demo →</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="guide-content">
+    {{ content }}
+  </div>
+
+  <footer class="guide-footer">
+    <p><a href="{{ '/projects/' | relative_url }}">← Back to Projects</a></p>
+  </footer>
+</article>
